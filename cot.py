@@ -26,7 +26,7 @@ titleFrame.pack(padx=5, pady=5)
 resultsFrame = ttk.Frame(root)
 resultsFrame.pack(padx=5, pady=5)
 
-dinResultsFrame = ttk.Frame(resultsFrame)
+dinResultsFrame = ttk.Frame(resultsFrame, height=500)
 
 guideFrame = ttk.Frame(root)
 guideFrame.pack(padx=10)
@@ -34,21 +34,27 @@ guideFrame.pack(padx=10)
 commandFrame = ttk.Frame(root)
 commandFrame.pack(padx=5, pady=5)
 
+quoteFrame = ttk.Frame(root)
+quoteFrame.pack(padx=5, pady=5)
+
 # Widgets
 
 titleLabel = ttk.Label(titleFrame, text = "Cotizaciones v1.0")
 titleResults = ttk.Label(resultsFrame, text = "Resultados")
-label = ttk.Label(resultsFrame, text="This is a ttk.Frame!")
+titleCommand = ttk.Label(commandFrame, text = "Comandos")
+titleQuote = ttk.Label(quoteFrame, text = "Cotización")
 
+entryCommand = ttk.Entry(commandFrame, width=300)
 resultsNotebook = ttk.Notebook(dinResultsFrame)
-
 
 # View
 
 titleLabel.pack()
 titleResults.pack()
+titleCommand.pack()
+titleQuote.pack()
+entryCommand.pack()
 dinResultsFrame.pack(expand = True)
-label.pack(pady=10)
 
 # Main event loop para mostrar la ventana
 root.mainloop()
